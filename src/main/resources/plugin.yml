@@ -1,0 +1,16 @@
+name: Territories
+main: com.chromaclypse.territories.TerritoryMain
+version: ${project.version}
+description: Region management
+author: ezeiger92
+api-version: 1.15
+depend: [ChromaLib, Vault]
+commands:
+  territory:
+    description: Root Territories command
+    usage: /<command> [args ...]
+    permission: territory.temp
+permissions:
+  territory.temp:
+    description: fgsfds
+    default: op
