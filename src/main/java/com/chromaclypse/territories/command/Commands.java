@@ -31,8 +31,8 @@ public class Commands {
 		TabExecutor command = new CommandBase()
 				.with().arg("spawn").calls(residentCmds::spawn)
 				.with().arg("spawn").option(this::allTerritories).calls(residentCmds::spawnOther)
-				.with().arg("create").calls(managerCmds::create)
-				.with().arg("move").calls(managerCmds::move)
+				.with().arg("create").requires("territories.manage").calls(managerCmds::create)
+				.with().arg("move").requires("territories.manage").calls(managerCmds::move)
 				.with().arg("version").calls(CommandBase::pluginVersion)
 				.getCommand();
 
